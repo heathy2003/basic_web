@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harriet Boone’s Blog</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+   <script src="script.js" defer></script>
+   <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+        var text = {
+            '1':"This light weight hand made necklace sits beautifully across the neck. Made from screen printed and hand painted plywood with toggle ends and comes beautifully packaged in a box. Size: The length of each tie is 40 cm. 15. 2 cm wide, 5.6 cm high and 0.4 cm deep.",
+            '2':"Tribal necklace wall hanging Regular price $40.00 Shipping calculated at checkout. or make 4 interest-free payments of $10.00 AUD fortnightly with Afterpay More info",
+            '3':"Olive Wood Ring, Olive Wood Band, Men Ring, Women Wedding Band, Olive Ring, Wood Ring, Wedding Men Ring, Wood Wedding Jewelry, Olive Jewelry, Custom Ring, Personalized Ring",
+            '4':"Mala prayer beads mens yoga necklace handmade and hand knotted from 108 healing gemstones protective Turquoise and Sacred Rudraksha Beads and blessed with a beautiful hand carved black horn sacred 'OM' charm.",
+
+        }
+        var img = {
+            '1':"https://scoopsdesign.com.au/cdn/shop/products/necklace3_black.jpg?v=1542587164&width=713",
+            '2':"https://www.walnutlane.com.au/cdn/shop/products/IMG_20201030_151227-175181_540x.jpg",
+            '3':"https://images-cdn.ubuy.co.in/6357f607abba8d421d19bd2a-olive-wood-ring-olive-wood-band-men.jpg",
+            '4':"https://heartmala.com/cdn/shop/products/image_65be78d6-44b1-497c-b7a0-b231a8e9e76f_1024x1024.jpg?v=1635236230",
+        }
+        window.onload = function() {
+            // Get reference to the paragraph and image elements
+            var paragraphElement = document.getElementById("paragraph");
+            var imageElement = document.getElementById("image");
+
+            // Set new values for paragraph text and image source
+            paragraphElement.innerHTML = text[id];
+            imageElement.src = img[id];
+
+        }
+        changeContent();
+      </script>
+</head>
+<body>
+    <nav class="nav">
+        <i class="uil uil-bars navOpenBtn"></i>
+        <a href="#" class="logo">Harriet Boone’s Blog</a>
+  
+        <ul class="nav-links">
+          <i class="uil uil-times navCloseBtn"></i>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Feature</a></li>
+          <li><a href="#">Post</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="#">Shop</a></li>
+        </ul>
+  
+        <i class="uil uil-search search-icon" id="searchIcon"></i>
+        <div class="search-box">
+          <i class="uil uil-search search-icon"></i>
+          <input type="text" placeholder="Search here..." />
+        </div>
+      </nav>
+
+      <div>
+        <div id = "cont-img"
+        
+        ><img id="image" src=""/></div>
+        <p id="paragraph"></p>
+      </div>
+</body>
+</html>
